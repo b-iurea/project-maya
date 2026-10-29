@@ -1,0 +1,20 @@
+glm mtp: CUDA0 the NextN block (blk.45) loaded: 173 MB dense, experts q2_K/q3_K
+glm mtp: CUDA0 the MTP decode drafts over 98741 of 154880 tokens (the ids below 98304 and 437 more: 316 of 496 MB a draft), chained on the device (token_embd there, 496 MB)
+glm mtp: a drafting round's host time - drafts 10.16 ms, verify 88.60 ms, commit + cache 0.17 ms (12 rounds)
+glm mtp: the draft vocabulary (98304 + 437 tokens) - 0 of 32 emitted tokens outside it, 0 of 12 drafting rounds on the whole head
+glm mtp: 13 rounds, 2.46 tokens a round | rounds by draft length 0:1 2:9 3:3
+glm stat: decode 39.27 ms/tok (25.46 tok/s) | vram hit 99.95% | ram fetches 0.00/tok | disk 0.22 reads/tok in 0.22 waits/tok, 1.76 ms/tok | promotions 0.22/tok | cpu lane 0.00/tok in 0.00 ms/tok | prompt 81.0 ms/tok | vram 12363/12384 ram 0/48
+glm spec: 18 of 27 drafts accepted (66.7%)
+glm stat: decode 0.02 ms/tok (63455.80 tok/s) | vram hit 0.00% | ram fetches 0.00/tok | disk 0.00 reads/tok in 0.00 waits/tok, 0.00 ms/tok | promotions 0.00/tok | cpu lane 0.00/tok in 0.00 ms/tok | prompt 3.5 ms/tok | vram 11928/12384 ram 7/48
+glm mtp: a drafting round's host time - drafts 8.14 ms, verify 124.08 ms, commit + cache 0.21 ms (47 rounds)
+glm mtp: the draft vocabulary (98304 + 437 tokens) - 0 of 128 emitted tokens outside it, 0 of 47 drafting rounds on the whole head
+glm mtp: 47 rounds, 2.72 tokens a round | rounds by draft length 1:4 2:34 3:9
+glm stat: decode 48.63 ms/tok (20.56 tok/s) | vram hit 99.56% | ram fetches 0.00/tok | disk 1.71 reads/tok in 1.64 waits/tok, 10.48 ms/tok | promotions 1.71/tok | cpu lane 0.00/tok in 0.00 ms/tok | prompt 0.0 ms/tok | vram 12171/12384 ram 0/48
+glm spec: 80 of 99 drafts accepted (80.8%)
+glm stat: decode 0.01 ms/tok (100220.49 tok/s) | vram hit 0.00% | ram fetches 0.00/tok | disk 0.00 reads/tok in 0.00 waits/tok, 0.00 ms/tok | promotions 0.00/tok | cpu lane 0.00/tok in 0.00 ms/tok | prompt 3.6 ms/tok | vram 11658/12384 ram 8/48
+glm mtp: a drafting round's host time - drafts 8.85 ms, verify 125.18 ms, commit + cache 0.29 ms (51 rounds)
+glm mtp: the draft vocabulary (98304 + 437 tokens) - 0 of 128 emitted tokens outside it, 0 of 51 drafting rounds on the whole head
+glm mtp: 51 rounds, 2.51 tokens a round | rounds by draft length 1:1 2:49 3:1
+glm stat: decode 53.52 ms/tok (18.69 tok/s) | vram hit 99.60% | ram fetches 0.00/tok | disk 1.65 reads/tok in 1.62 waits/tok, 10.02 ms/tok | promotions 1.65/tok | cpu lane 0.00/tok in 0.00 ms/tok | prompt 0.0 ms/tok | vram 11893/12384 ram 0/48
+glm spec: 76 of 102 drafts accepted (74.5%)
+glm spec: 228 speculative positions, 76.3% accepted
