@@ -1,0 +1,14 @@
+{
+ "date": "2026-10-29 21:18",
+ "kernel": "7.0.0-38-generic",
+ "cmdline": "BOOT_IMAGE=/boot/vmlinuz-7.0.0-38-generic root=UUID=6ce5aa5c-d161-4150-b9da-22ecfcd8a591 ro amdgpu.gttsize=126976 ttm.pages_limit=32505856 amdgpu.noretry=0 amdgpu.vm_update_mode=0 amdgpu.sg_display=0 crashkernel=2G-4G:320M,4G-32G:512M,32G-64G:1024M,64G-128G:2048M,128G-:4096M",
+ "rocm": "/opt/rocm-7.2.4",
+ "gpu": "gfx1151",
+ "governor": "powersave",
+ "platform_profile": "none",
+ "mclk_levels": "0: 400Mhz  1: 800Mhz  2: 1066Mhz",
+ "vram_carveout_mb": "536870912",
+ "thp": "always [madvise] never",
+ "mem": "Mem:             122           2         111           0           9         119",
+ "git": "cf6472c"
+}

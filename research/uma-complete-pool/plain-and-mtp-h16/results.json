@@ -1,0 +1,74 @@
+[
+ {
+  "mtp": 0,
+  "prompt": 2035,
+  "target": 2048,
+  "run": 0,
+  "tokens": 256,
+  "prefill_tps": 303.36458907887476,
+  "decode_tps": 18.730428165881353,
+  "glm_stat": "glm stat: decode 53.39 ms/tok (18.73 tok/s) | vram hit 100.00% | ram fetches 0.00/tok | disk 0.00 reads/tok in 0.00 waits/tok, 0.00 ms/tok | promotions 0.00/tok | cpu lane 0.00/tok in 0.00 ms/tok | prompt 3.3 ms/tok | vram 12096/13146 ram 0/32",
+  "accept": null,
+  "cpu_cores_busy": 2.339060743925362
+ },
+ {
+  "mtp": 0,
+  "prompt": 2035,
+  "target": 2048,
+  "run": 1,
+  "tokens": 256,
+  "prefill_tps": 308.0626116443126,
+  "decode_tps": 18.717965591114815,
+  "glm_stat": "glm stat: decode 53.42 ms/tok (18.72 tok/s) | vram hit 100.00% | ram fetches 0.00/tok | disk 0.00 reads/tok in 0.00 waits/tok, 0.00 ms/tok | promotions 0.00/tok | cpu lane 0.00/tok in 0.00 ms/tok | prompt 3.2 ms/tok | vram 12096/13146 ram 0/32",
+  "accept": null,
+  "cpu_cores_busy": 2.328115370393197
+ },
+ {
+  "mtp": 0,
+  "prompt": 2039,
+  "target": 2048,
+  "run": 2,
+  "tokens": 256,
+  "prefill_tps": 305.8255339572834,
+  "decode_tps": 18.711945676882706,
+  "glm_stat": "glm stat: decode 53.44 ms/tok (18.71 tok/s) | vram hit 100.00% | ram fetches 0.00/tok | disk 0.00 reads/tok in 0.00 waits/tok, 0.00 ms/tok | promotions 0.00/tok | cpu lane 0.00/tok in 0.00 ms/tok | prompt 3.3 ms/tok | vram 12096/13146 ram 0/32",
+  "accept": null,
+  "cpu_cores_busy": 2.330415808691636
+ },
+ {
+  "mtp": 1,
+  "prompt": 2035,
+  "target": 2048,
+  "run": 0,
+  "tokens": 256,
+  "prefill_tps": 294.11764705882354,
+  "decode_tps": 22.14322166575845,
+  "glm_stat": "glm stat: decode 45.16 ms/tok (22.14 tok/s) | vram hit 99.71% | ram fetches 0.00/tok | disk 1.09 reads/tok in 1.05 waits/tok, 7.57 ms/tok | promotions 1.09/tok | cpu lane 0.00/tok in 0.00 ms/tok | prompt 3.4 ms/tok | vram 12232/12384 ram 1/48",
+  "accept": "155/183",
+  "cpu_cores_busy": 2.851716170367044
+ },
+ {
+  "mtp": 1,
+  "prompt": 2035,
+  "target": 2048,
+  "run": 1,
+  "tokens": 256,
+  "prefill_tps": 294.8762534052049,
+  "decode_tps": 22.89188947509613,
+  "glm_stat": "glm stat: decode 43.68 ms/tok (22.89 tok/s) | vram hit 99.79% | ram fetches 0.00/tok | disk 0.83 reads/tok in 0.80 waits/tok, 5.13 ms/tok | promotions 0.83/tok | cpu lane 0.00/tok in 0.00 ms/tok | prompt 3.4 ms/tok | vram 12170/12384 ram 0/48",
+  "accept": "154/193",
+  "cpu_cores_busy": 2.8472368144568194
+ },
+ {
+  "mtp": 1,
+  "prompt": 2039,
+  "target": 2048,
+  "run": 2,
+  "tokens": 256,
+  "prefill_tps": 249.4250623868474,
+  "decode_tps": 19.211286630895653,
+  "glm_stat": "glm stat: decode 52.05 ms/tok (19.21 tok/s) | vram hit 99.82% | ram fetches 0.00/tok | disk 0.72 reads/tok in 0.68 waits/tok, 8.07 ms/tok | promotions 0.72/tok | cpu lane 0.00/tok in 0.00 ms/tok | prompt 4.0 ms/tok | vram 12139/12384 ram 0/48",
+  "accept": "117/159",
+  "cpu_cores_busy": 2.711124961047056
+ }
+]
