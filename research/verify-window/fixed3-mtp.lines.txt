@@ -1,0 +1,19 @@
+glm mtp: CUDA0 the NextN block (blk.45) loaded: 173 MB dense, experts q2_K/q3_K
+glm mtp: CUDA0 the MTP decode drafts over 98741 of 154880 tokens (the ids below 98304 and 437 more: 316 of 496 MB a draft), chained on the device (token_embd there, 496 MB)
+glm mtp: a drafting round's host time - drafts 14.41 ms, verify 101.69 ms, commit + cache 0.08 ms (23 rounds)
+glm mtp: the draft vocabulary (98304 + 437 tokens) - 2 of 64 emitted tokens outside it, 3 of 23 drafting rounds on the whole head
+glm mtp: 23 rounds, 2.78 tokens a round | rounds by draft length 3:23
+glm spec: 40 of 69 drafts accepted (58.0%)
+glm mtp: a drafting round's host time - drafts 13.15 ms, verify 129.98 ms, commit + cache 0.13 ms (87 rounds)
+glm mtp: the draft vocabulary (98304 + 437 tokens) - 0 of 256 emitted tokens outside it, 8 of 87 drafting rounds on the whole head
+glm mtp: 87 rounds, 2.94 tokens a round | rounds by draft length 2:1 3:86
+glm spec: 168 of 260 drafts accepted (64.6%)
+glm mtp: a drafting round's host time - drafts 12.42 ms, verify 129.21 ms, commit + cache 0.12 ms (81 rounds)
+glm mtp: the draft vocabulary (98304 + 437 tokens) - 0 of 256 emitted tokens outside it, 0 of 81 drafting rounds on the whole head
+glm mtp: 81 rounds, 3.16 tokens a round | rounds by draft length 1:1 3:80
+glm spec: 174 of 241 drafts accepted (72.2%)
+glm mtp: a drafting round's host time - drafts 14.85 ms, verify 129.52 ms, commit + cache 0.14 ms (103 rounds)
+glm mtp: the draft vocabulary (98304 + 437 tokens) - 0 of 256 emitted tokens outside it, 0 of 103 drafting rounds on the whole head
+glm mtp: 103 rounds, 2.49 tokens a round | rounds by draft length 1:1 3:102
+glm spec: 152 of 307 drafts accepted (49.5%)
+glm spec: 877 speculative positions, 60.9% accepted
