@@ -1,0 +1,111 @@
+glm mtp: CUDA0 the NextN block (blk.45) loaded: 173 MB dense, experts q2_K/q3_K
+glm mtp: CUDA0 the MTP decode drafts over 98741 of 154880 tokens (the ids below 98304 and 437 more: 316 of 496 MB a draft), chained on the device (token_embd there, 496 MB)
+glm prefill: CUDA0 cuBLAS warm-up: sgemm 0, gemm f16 0, sync no error
+glm prefill: CUDA0 the chunk stage line is on (STRATA_GLM_PREFILL_STAGES=0 silences it)
+glm prefill: CUDA0 chunks of 19712 tokens (--prefill auto, up to 32768; mixer sub-batches of 1024), borrowing 6115 MB of the expert pool while a prompt runs (activations 4764, weight scratch 96, expert staging 86, prestage 1153: 160 experts); disk landing ring 12 experts (86 MB pinned)
+glm fast: CUDA0 VRAM before the expert pool: 28.17 of 124.00 GB in use - dense weights 6.86, state/KV (1048576 ctx) 1.94, activations 0.07, other (context, MTP, scratch, prompt path) 19.31
+glm fast: CUDA0 unified memory: MemAvailable 102.62 GB, headroom 16.00 GB + 1024 MB reserve, experts need 82.62 GB, pool budget 82.62 GB
+glm fast: the expert profile /home/engineering/maya/project-maya/data/expert-profile-glm.bin ranks 13248 (layer, expert) pairs
+glm fast: CUDA0 layers [0,45) expert pool 82.62 GB, 288-288 slots/layer, the draft layer 288 (12384 total)
+glm fast: CUDA0 all experts fit in the GPU pool; RAM tier is staging only
+glm fast: CUDA0 RAM tier 0.35 GB pinned, 48 slots
+glm fast: CUDA0 warming the expert tiers 10% (8.9 of 88.7 GB, 6 s)
+glm fast: CUDA0 warming the expert tiers 20% (17.8 of 88.7 GB, 12 s)
+glm fast: CUDA0 warming the expert tiers 30% (26.6 of 88.7 GB, 18 s)
+glm fast: CUDA0 warming the expert tiers 40% (35.5 of 88.7 GB, 24 s)
+glm fast: CUDA0 warming the expert tiers 50% (44.4 of 88.7 GB, 30 s)
+glm fast: CUDA0 warming the expert tiers 60% (53.2 of 88.7 GB, 35 s)
+glm fast: CUDA0 warming the expert tiers 70% (62.1 of 88.7 GB, 41 s)
+glm fast: CUDA0 warming the expert tiers 80% (71.0 of 88.7 GB, 47 s)
+glm fast: CUDA0 warming the expert tiers 90% (79.8 of 88.7 GB, 53 s)
+glm fast: CUDA0 warming the expert tiers 100% (88.7 of 88.7 GB, 59 s)
+glm fast: CUDA0 tiers warm: 12384 experts (88.7 GB) in 59 s (1.50 GB/s)
+glm fast: CUDA0 CPU lane off: the RAM tier holds no expert
+glm prefill: CUDA0 the MMQ scratch pool has 16.0 MB of the loan (16.0 MB past the layout's need; 44 experts more lent for it)
+glm prefill: CUDA0 chunk 1/1, 12 tokens, wall 861 ms | the copy lane 630 ms: copies 44 (1.3 GB/s), ring wait 0, gaps 0, mixer windows 586 | lead 213, tail 18 | pcie 0.06 GB (ram 0.02, disk 0.04) + 0.52 GB vram | experts: staged 87, resident 11214 (3918 rows), prestaged 0, cpu 0 (0 rows, 0 ms) | plan 0 ms host, disk wait 0 ms, hop in 0 ms | layer lane 29.0/0.1 ms max/min
+glm prefill: 12 tokens in 862.7 ms (71.89 ms/token, 14 tok/s), 1 chunk of 64 tokens | CUDA0 861 ms
+glm mtp: a drafting round's host time - drafts 6.90 ms, verify 77.19 ms, commit + cache 0.04 ms (28 rounds)
+glm mtp: the draft vocabulary (98304 + 437 tokens) - 2 of 64 emitted tokens outside it, 5 of 28 drafting rounds on the whole head
+glm mtp: 32 rounds, 2.00 tokens a round | rounds by draft length 0:4 1:16 2:8 3:4
+glm stat: decode 40.02 ms/tok (24.99 tok/s) | vram hit 99.95% | ram fetches 0.00/tok | disk 0.22 reads/tok in 0.22 waits/tok, 1.70 ms/tok | promotions 0.22/tok | cpu lane 0.00/tok in 0.00 ms/tok | prompt 74.7 ms/tok | vram 12370/12384 ram 0/48
+glm spec: 31 of 44 drafts accepted (70.5%)
+glm prefill: CUDA0 chunk 1/1, 2034 tokens, wall 7229 ms | the copy lane 6678 ms: copies 249 (11.1 GB/s), ring wait 2317, gaps 1, mixer windows 4111 | lead 515, tail 36 | pcie 2.76 GB (ram 0.21, disk 2.55) + 2.40 GB vram | experts: staged 779, resident 11214 (663786 rows), prestaged 0, cpu 0 (0 rows, 0 ms) | plan 1 ms host, disk wait 0 ms, hop in 0 ms | layer lane 72.4/56.5 ms max/min
+glm prefill: 2034 tokens in 7237.5 ms (3.56 ms/token, 281 tok/s), 1 chunk of 2048 tokens | CUDA0 7229 ms
+glm mtp: a drafting round's host time - drafts 7.60 ms, verify 106.43 ms, commit + cache 0.06 ms (102 rounds)
+glm mtp: the draft vocabulary (98304 + 437 tokens) - 0 of 256 emitted tokens outside it, 9 of 102 drafting rounds on the whole head
+glm mtp: 103 rounds, 2.49 tokens a round | rounds by draft length 0:1 1:28 2:61 3:13
+glm stat: decode 45.67 ms/tok (21.89 tok/s) | vram hit 99.72% | ram fetches 0.00/tok | disk 1.10 reads/tok in 1.06 waits/tok, 6.68 ms/tok | promotions 1.10/tok | cpu lane 0.00/tok in 0.00 ms/tok | prompt 3.6 ms/tok | vram 12234/12384 ram 1/48
+glm spec: 152 of 189 drafts accepted (80.4%)
+glm slots: saved a 2034-token conversation (0.17 GB in 0.1 s); 1 kept, 0.17 GB
+glm prefill: CUDA0 chunk 1/1, 2034 tokens, wall 7118 ms | the copy lane 6569 ms: copies 289 (8.8 GB/s), ring wait 2137, gaps 1, mixer windows 4143 | lead 514, tail 35 | pcie 2.53 GB (ram 0.00, disk 2.53) + 2.42 GB vram | experts: staged 748, resident 11214 (667507 rows), prestaged 30, cpu 0 (0 rows, 0 ms) | plan 2 ms host, disk wait 0 ms, hop in 0 ms | layer lane 65.6/0.6 ms max/min
+glm prefill: 2034 tokens in 7127.2 ms (3.50 ms/token, 285 tok/s), 1 chunk of 2048 tokens | CUDA0 7118 ms
+glm mtp: a drafting round's host time - drafts 7.67 ms, verify 104.50 ms, commit + cache 0.07 ms (102 rounds)
+glm mtp: the draft vocabulary (98304 + 437 tokens) - 0 of 256 emitted tokens outside it, 0 of 102 drafting rounds on the whole head
+glm mtp: 102 rounds, 2.51 tokens a round | rounds by draft length 1:13 2:83 3:6
+glm stat: decode 44.72 ms/tok (22.36 tok/s) | vram hit 99.78% | ram fetches 0.00/tok | disk 0.88 reads/tok in 0.86 waits/tok, 5.40 ms/tok | promotions 0.88/tok | cpu lane 0.00/tok in 0.00 ms/tok | prompt 3.6 ms/tok | vram 12183/12384 ram 0/48
+glm spec: 153 of 197 drafts accepted (77.7%)
+glm slots: saved a 2034-token conversation (0.17 GB in 0.0 s); 2 kept, 0.34 GB
+glm prefill: CUDA0 chunk 1/1, 2038 tokens, wall 7132 ms | the copy lane 6578 ms: copies 307 (8.3 GB/s), ring wait 2115, gaps 1, mixer windows 4155 | lead 519, tail 34 | pcie 2.53 GB (ram 0.01, disk 2.53) + 2.40 GB vram | experts: staged 745, resident 11214 (669269 rows), prestaged 29, cpu 0 (0 rows, 0 ms) | plan 1 ms host, disk wait 0 ms, hop in 0 ms | layer lane 71.3/0.7 ms max/min
+glm prefill: 2038 tokens in 7141.1 ms (3.50 ms/token, 285 tok/s), 1 chunk of 2048 tokens | CUDA0 7132 ms
+glm mtp: a drafting round's host time - drafts 5.63 ms, verify 86.97 ms, commit + cache 0.05 ms (135 rounds)
+glm mtp: the draft vocabulary (98304 + 437 tokens) - 0 of 256 emitted tokens outside it, 0 of 135 drafting rounds on the whole head
+glm mtp: 140 rounds, 1.83 tokens a round | rounds by draft length 0:5 1:110 2:19 3:6
+glm stat: decode 49.94 ms/tok (20.03 tok/s) | vram hit 99.81% | ram fetches 0.00/tok | disk 0.76 reads/tok in 0.74 waits/tok, 4.75 ms/tok | promotions 0.77/tok | cpu lane 0.00/tok in 0.00 ms/tok | prompt 3.5 ms/tok | vram 12148/12384 ram 0/48
+glm spec: 115 of 166 drafts accepted (69.3%)
+glm slots: saved a 2038-token conversation (0.17 GB in 0.1 s); 3 kept, 0.51 GB
+glm prefill: CUDA0 chunk 1/1, 16384 tokens, wall 58398 ms | the copy lane 53631 ms: copies 181 (25.1 GB/s), ring wait 14533, gaps 1, mixer windows 38916 | lead 4567, tail 201 | pcie 4.53 GB (ram 0.01, disk 4.52) + 1.05 GB vram | experts: staged 844, resident 11214 (5375654 rows), prestaged 30, cpu 0 (0 rows, 0 ms) | plan 3 ms host, disk wait 0 ms, hop in 0 ms | layer lane 384.2/1.3 ms max/min
+glm prefill: 16384 tokens in 58456.7 ms (3.57 ms/token, 280 tok/s), 1 chunk of 16384 tokens | CUDA0 58398 ms
+glm prefill: CUDA0 chunk 1/1, 16370 tokens, wall 59294 ms | the copy lane 54527 ms: copies 226 (20.2 GB/s), ring wait 14568, gaps 1, mixer windows 39732 | lead 4565, tail 202 | pcie 4.57 GB (ram 0.00, disk 4.57) + 1.06 GB vram | experts: staged 850, resident 11214 (5365846 rows), prestaged 25, cpu 0 (0 rows, 0 ms) | plan 3 ms host, disk wait 0 ms, hop in 0 ms | layer lane 388.1/1.6 ms max/min
+glm prefill: 16370 tokens in 59351.0 ms (3.63 ms/token, 276 tok/s), 1 chunk of 16384 tokens | CUDA0 59294 ms
+glm mtp: a drafting round's host time - drafts 7.38 ms, verify 104.89 ms, commit + cache 0.08 ms (101 rounds)
+glm mtp: the draft vocabulary (98304 + 437 tokens) - 0 of 256 emitted tokens outside it, 0 of 101 drafting rounds on the whole head
+glm mtp: 104 rounds, 2.46 tokens a round | rounds by draft length 0:3 1:28 2:65 3:8
+glm stat: decode 45.20 ms/tok (22.12 tok/s) | vram hit 99.77% | ram fetches 0.00/tok | disk 0.88 reads/tok in 0.83 waits/tok, 5.42 ms/tok | promotions 0.88/tok | cpu lane 0.00/tok in 0.00 ms/tok | prompt 3.6 ms/tok | vram 11912/12384 ram 1/48
+glm spec: 151 of 182 drafts accepted (83.0%)
+glm slots: saved a 32754-token conversation (0.42 GB in 0.1 s); 4 kept, 0.92 GB
+glm prefill: CUDA0 chunk 1/1, 16370 tokens, wall 59412 ms | the copy lane 54560 ms: copies 221 (20.4 GB/s), ring wait 14584, gaps 1, mixer windows 39754 | lead 4646, tail 206 | pcie 4.51 GB (ram 0.00, disk 4.51) + 1.05 GB vram | experts: staged 839, resident 11214 (5379176 rows), prestaged 31, cpu 0 (0 rows, 0 ms) | plan 3 ms host, disk wait 0 ms, hop in 0 ms | layer lane 386.9/0.9 ms max/min
+glm prefill: 16370 tokens in 59469.8 ms (3.63 ms/token, 275 tok/s), 1 chunk of 16384 tokens | CUDA0 59412 ms
+glm mtp: a drafting round's host time - drafts 4.83 ms, verify 91.35 ms, commit + cache 0.04 ms (124 rounds)
+glm mtp: the draft vocabulary (98304 + 437 tokens) - 2 of 256 emitted tokens outside it, 14 of 124 drafting rounds on the whole head
+glm mtp: 128 rounds, 2.00 tokens a round | rounds by draft length 0:4 1:103 2:18 3:3
+glm stat: decode 47.50 ms/tok (21.05 tok/s) | vram hit 99.76% | ram fetches 0.01/tok | disk 0.86 reads/tok in 0.84 waits/tok, 5.43 ms/tok | promotions 0.86/tok | cpu lane 0.00/tok in 0.00 ms/tok | prompt 1.8 ms/tok | vram 11906/12384 ram 1/48
+glm spec: 127 of 148 drafts accepted (85.8%)
+glm slots: saved a 32754-token conversation (0.42 GB in 0.1 s); 4 kept, 1.17 GB
+glm prefill: CUDA0 chunk 1/1, 16374 tokens, wall 59095 ms | the copy lane 54276 ms: copies 208 (21.7 GB/s), ring wait 14519, gaps 1, mixer windows 39548 | lead 4618, tail 202 | pcie 4.50 GB (ram 0.00, disk 4.50) + 1.04 GB vram | experts: staged 837, resident 11214 (5384493 rows), prestaged 32, cpu 0 (0 rows, 0 ms) | plan 2 ms host, disk wait 0 ms, hop in 0 ms | layer lane 385.8/1.1 ms max/min
+glm prefill: 16374 tokens in 59153.5 ms (3.61 ms/token, 277 tok/s), 1 chunk of 16384 tokens | CUDA0 59095 ms
+glm mtp: a drafting round's host time - drafts 5.06 ms, verify 86.80 ms, commit + cache 0.04 ms (138 rounds)
+glm mtp: the draft vocabulary (98304 + 437 tokens) - 4 of 256 emitted tokens outside it, 33 of 138 drafting rounds on the whole head
+glm mtp: 143 rounds, 1.79 tokens a round | rounds by draft length 0:5 1:126 2:12
+glm stat: decode 50.64 ms/tok (19.75 tok/s) | vram hit 99.79% | ram fetches 0.02/tok | disk 0.78 reads/tok in 0.76 waits/tok, 4.89 ms/tok | promotions 0.77/tok | cpu lane 0.00/tok in 0.00 ms/tok | prompt 1.8 ms/tok | vram 11882/12384 ram 2/48
+glm spec: 112 of 150 drafts accepted (74.7%)
+glm slots: saved a 32758-token conversation (0.42 GB in 0.1 s); 4 kept, 1.42 GB
+glm prefill: CUDA0 chunk 1/1, 16384 tokens, wall 58680 ms | the copy lane 53928 ms: copies 208 (21.7 GB/s), ring wait 14641, gaps 1, mixer windows 39078 | lead 4551, tail 201 | pcie 4.53 GB (ram 0.00, disk 4.53) + 1.04 GB vram | experts: staged 841, resident 11214 (5383822 rows), prestaged 32, cpu 0 (0 rows, 0 ms) | plan 2 ms host, disk wait 0 ms, hop in 0 ms | layer lane 388.6/1.1 ms max/min
+glm prefill: 16384 tokens in 58739.2 ms (3.59 ms/token, 279 tok/s), 1 chunk of 16384 tokens | CUDA0 58680 ms
+glm prefill: CUDA0 chunk 1/1, 16657 tokens, wall 60837 ms | the copy lane 55838 ms: copies 246 (18.7 GB/s), ring wait 14861, gaps 1, mixer windows 40730 | lead 4801, tail 199 | pcie 4.59 GB (ram 0.00, disk 4.59) + 0.97 GB vram | experts: staged 841, resident 11214 (5461663 rows), prestaged 28, cpu 0 (0 rows, 0 ms) | plan 2 ms host, disk wait 0 ms, hop in 0 ms | layer lane 393.2/1.7 ms max/min
+glm prefill: 16657 tokens in 60896.9 ms (3.66 ms/token, 274 tok/s), 1 chunk of 16704 tokens | CUDA0 60837 ms
+glm prefill: CUDA0 chunk 1/1, 16111 tokens, wall 59601 ms | the copy lane 54692 ms: copies 220 (21.2 GB/s), ring wait 14242, gaps 1, mixer windows 40229 | lead 4714, tail 194 | pcie 4.67 GB (ram 0.00, disk 4.67) + 0.97 GB vram | experts: staged 852, resident 11214 (5238080 rows), prestaged 24, cpu 0 (0 rows, 0 ms) | plan 2 ms host, disk wait 0 ms, hop in 0 ms | layer lane 375.0/1.6 ms max/min
+glm prefill: 16111 tokens in 59657.0 ms (3.70 ms/token, 270 tok/s), 1 chunk of 16128 tokens | CUDA0 59601 ms
+glm prefill: CUDA0 chunk 1/1, 16367 tokens, wall 60762 ms | the copy lane 55832 ms: copies 222 (21.0 GB/s), ring wait 14420, gaps 1, mixer windows 41189 | lead 4721, tail 209 | pcie 4.65 GB (ram 0.00, disk 4.65) + 0.97 GB vram | experts: staged 850, resident 11214 (5249757 rows), prestaged 24, cpu 0 (0 rows, 0 ms) | plan 3 ms host, disk wait 0 ms, hop in 0 ms | layer lane 387.3/1.7 ms max/min
+glm prefill: 16367 tokens in 60820.8 ms (3.72 ms/token, 269 tok/s), 1 chunk of 16384 tokens | CUDA0 60762 ms
+glm mtp: a drafting round's host time - drafts 7.75 ms, verify 106.86 ms, commit + cache 0.09 ms (103 rounds)
+glm mtp: the draft vocabulary (98304 + 437 tokens) - 0 of 256 emitted tokens outside it, 0 of 103 drafting rounds on the whole head
+glm mtp: 104 rounds, 2.46 tokens a round | rounds by draft length 0:1 1:17 2:86
+glm stat: decode 46.37 ms/tok (21.56 tok/s) | vram hit 99.80% | ram fetches 0.04/tok | disk 0.74 reads/tok in 0.70 waits/tok, 4.69 ms/tok | promotions 0.73/tok | cpu lane 0.00/tok in 0.00 ms/tok | prompt 3.7 ms/tok | vram 11863/12384 ram 3/48
+glm spec: 151 of 189 drafts accepted (79.9%)
+glm slots: saved a 65519-token conversation (0.68 GB in 0.1 s); 4 kept, 1.93 GB
+glm prefill: CUDA0 chunk 1/1, 16367 tokens, wall 60661 ms | the copy lane 55704 ms: copies 197 (23.4 GB/s), ring wait 14384, gaps 1, mixer windows 41121 | lead 4750, tail 208 | pcie 4.61 GB (ram 0.00, disk 4.61) + 0.97 GB vram | experts: staged 843, resident 11214 (5249366 rows), prestaged 32, cpu 0 (0 rows, 0 ms) | plan 3 ms host, disk wait 0 ms, hop in 0 ms | layer lane 386.2/1.1 ms max/min
+glm prefill: 16367 tokens in 60719.7 ms (3.71 ms/token, 270 tok/s), 1 chunk of 16384 tokens | CUDA0 60661 ms
+glm mtp: a drafting round's host time - drafts 8.86 ms, verify 113.94 ms, commit + cache 0.11 ms (102 rounds)
+glm mtp: the draft vocabulary (98304 + 437 tokens) - 1 of 256 emitted tokens outside it, 0 of 102 drafting rounds on the whole head
+glm mtp: 103 rounds, 2.49 tokens a round | rounds by draft length 0:1 2:98 3:4
+glm stat: decode 49.19 ms/tok (20.33 tok/s) | vram hit 99.78% | ram fetches 0.03/tok | disk 0.89 reads/tok in 0.87 waits/tok, 5.67 ms/tok | promotions 0.88/tok | cpu lane 0.00/tok in 0.00 ms/tok | prompt 0.9 ms/tok | vram 11900/12384 ram 2/48
+glm spec: 152 of 208 drafts accepted (73.1%)
+glm slots: saved a 65519-token conversation (0.68 GB in 0.1 s); 4 kept, 2.20 GB
+glm prefill: CUDA0 chunk 1/1, 16371 tokens, wall 61552 ms | the copy lane 56529 ms: copies 194 (23.8 GB/s), ring wait 14452, gaps 1, mixer windows 41882 | lead 4815, tail 208 | pcie 4.61 GB (ram 0.00, disk 4.61) + 0.97 GB vram | experts: staged 843, resident 11214 (5264552 rows), prestaged 30, cpu 0 (0 rows, 0 ms) | plan 3 ms host, disk wait 0 ms, hop in 0 ms | layer lane 388.4/1.1 ms max/min
+glm prefill: 16371 tokens in 61610.6 ms (3.76 ms/token, 266 tok/s), 1 chunk of 16384 tokens | CUDA0 61552 ms
+glm mtp: a drafting round's host time - drafts 5.26 ms, verify 89.78 ms, commit + cache 0.05 ms (136 rounds)
+glm mtp: the draft vocabulary (98304 + 437 tokens) - 0 of 256 emitted tokens outside it, 0 of 136 drafting rounds on the whole head
+glm mtp: 140 rounds, 1.83 tokens a round | rounds by draft length 0:4 1:117 2:19
+glm stat: decode 51.48 ms/tok (19.42 tok/s) | vram hit 99.81% | ram fetches 0.01/tok | disk 0.73 reads/tok in 0.70 waits/tok, 4.62 ms/tok | promotions 0.72/tok | cpu lane 0.00/tok in 0.00 ms/tok | prompt 0.9 ms/tok | vram 11859/12384 ram 2/48
+glm spec: 115 of 155 drafts accepted (74.2%)
+glm spec: 1628 speculative positions, 77.3% accepted
